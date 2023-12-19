@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Mproduct">
+	
+	
+	
+	<select id="list" resultType="teamD.project.dto.MproductDto">
+		select *
+		<!-- pname,id,price,creatAt,psize -->
+		from Mproduct
+	</select>
+	
+	
+ 	<select id="recentlist" resultType="teamD.project.dto.MproductDto">
+		SELECT pname,id,price,creatAt,psize 
+		FROM MPRODUCT 
+		ORDER BY CREATAT DESC
+	</select>
+	
+	
+	<select id="mostlist" resultType="teamD.project.dto.MproductDto">
+		SELECT pname,id,price,creatAt,psize 
+		FROM MPRODUCT
+		ORDER BY READCOUNT DESC
+	</select>
+	
+	
+	<select id="pnamelist" resultType="teamD.project.dto.MproductDto" parameterType="String">
+		SELECT pname,id,price,creatAt,psize 
+		FROM MPRODUCT 
+		WHERE pname = #{pname}
+	</select>
+	
+	
+	<!-- <select id="most" resultType="teamD.project.dto.MproductDto">
+		SELECT pname,id,price,creatAt,psize 
+		FROM MPRODUCT m 
+		ORDER BY READCOUNT DESC;
+	</select>
+	
+	
+	<select id="most" resultType="teamD.project.dto.MproductDto">
+		SELECT pname,id,price,creatAt,psize 
+		FROM MPRODUCT m 
+		ORDER BY READCOUNT DESC;
+	</select> -->
+
+</mapper>
+
