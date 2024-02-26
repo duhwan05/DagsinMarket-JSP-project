@@ -8,6 +8,10 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
 		<attributes>
+<<<<<<< HEAD
+=======
+			<attribute name="module" value="true"/>
+>>>>>>> b95258848772af5046332961e02831ee0c25a639
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>

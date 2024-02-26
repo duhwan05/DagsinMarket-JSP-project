@@ -15,6 +15,7 @@ public class MproductDao {
    public static MproductDao getInstance() {
       return dao;
    }
+<<<<<<< HEAD
    
    public MproductDto detail(int pcode) {
 	   SqlSession mapper = SqlSessionBean.getSession();
@@ -24,6 +25,9 @@ public class MproductDao {
    }
    
    
+=======
+
+>>>>>>> b95258848772af5046332961e02831ee0c25a639
 
    public List<MproductDto> list() {
       SqlSession mapper = SqlSessionBean.getSession();
@@ -32,9 +36,15 @@ public class MproductDao {
       return list;
    }
    
+<<<<<<< HEAD
    public List<MproductDto> recentlist() {
 	      SqlSession mapper = SqlSessionBean.getSession();
 	     List<MproductDto> list = mapper.selectList("Mproduct.recentlist");
+=======
+   public List<MproductDto> recentlist(Map<String,MproductDto> map) {
+	      SqlSession mapper = SqlSessionBean.getSession();
+	      List<MproductDto> list = mapper.selectList("Mproduct.recentlist");
+>>>>>>> b95258848772af5046332961e02831ee0c25a639
 	      mapper.close();
 	      return list;
 	   }
@@ -56,6 +66,7 @@ public class MproductDao {
 	   }
    
    
+<<<<<<< HEAD
    public int readCount(int pcode) {
       SqlSession mapper = SqlSessionBean.getSession();
       int result = mapper.update("Mproduct.readCount", pcode);
@@ -164,4 +175,12 @@ public class MproductDao {
 
    
    
+=======
+   public int count() {
+      SqlSession mapper = SqlSessionBean.getSession();
+      int result = mapper.selectOne("Mproduct.count");
+      mapper.close();
+      return result;
+}
+>>>>>>> b95258848772af5046332961e02831ee0c25a639
 }

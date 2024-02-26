@@ -9,13 +9,18 @@ import org.junit.jupiter.api.Test;
 
 import mybatis.SqlSessionBean;
 import teamD.project.dao.MproductDao;
+<<<<<<< HEAD
 import teamD.project.dao.MuserDao;
 import teamD.project.dto.MproductDto;
 import teamD.project.dto.MuserDto;
+=======
+import teamD.project.dto.MproductDto;
+>>>>>>> b95258848772af5046332961e02831ee0c25a639
 
 class Test11 {
 
 	
+<<<<<<< HEAD
 	
 	 @Test void write() { 
 		 
@@ -27,6 +32,15 @@ class Test11 {
 	 
 	 }
 	 
+=======
+	  @Test void write() { MproductDao dao = MproductDao.getInstance();
+	  List<MproductDto> list = dao.mostlist();
+	  
+	  System.out.println(list); assertNotNull(list);
+	  
+	  }
+	  
+>>>>>>> b95258848772af5046332961e02831ee0c25a639
 		/*
 		 * @Test void all() { MproductDao dao = MproductDao.getInstance();
 		 * List<MproductDto> list = dao.list(); System.out.println(list);

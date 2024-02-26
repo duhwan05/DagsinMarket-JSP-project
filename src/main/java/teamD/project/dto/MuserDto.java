@@ -17,6 +17,7 @@ import lombok.ToString;
 @ToString
 
 public class MuserDto {
+<<<<<<< HEAD
 	private String id;
 	private String Password;
 	private String Name;
@@ -24,5 +25,13 @@ public class MuserDto {
 	private Date birth;
 	private String Address;
 	private String phone;
+=======
+	private String ID;
+	private String Passward;
+	private String Name;
+	private String NickName;
+	private Date birth;
+	private String Address;
+>>>>>>> b95258848772af5046332961e02831ee0c25a639
 
 }
